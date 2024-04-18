@@ -15,6 +15,19 @@ n is even.
 */
 
 // ascending order: a_1 <= a_2 <= ... <= a_n => max(a_1 + a_n, a_2 + a_(n - 1), ...)
+
+// intuition: 
+// if we have 2 sums: a_i + a_j and a_k + a_l, where i < j < k < l (a_i <= a_j <= a_k <= a_l)
+// we can minimize the maximum pair sum by reordering the sum to a_i + a_l and a_j + a_k (<= a_k + a_l)
+// we can minimize until reaching a_1 + a_n, a_2 + a_(n - 1), ...
+
+// concise proof (by contradiction):
+// suppose we have the minimal maximum pair sum in a particular way, where a_i + a_j and a_k + a_l (i < j, k < l) are second max and max pair sum
+// if j < k => i < j < k < l => like the intuition part
+// if j > k => i < k < j < l (because a_i must < a_l) => reordering: a_i + a_l and a_j + a_k (<= a_k + a_l) 
+// in both cases, we can generate new pair sums, where the maximum one is minimized 
+// repeat until reaching a_1 + a_n, a_2 + a_(n - 1), ...
+
 class Solution {
 public:
     int minPairSum(vector<int>& nums) {
