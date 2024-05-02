@@ -11,9 +11,9 @@ Possible sets of size 2 are {3,5},{3,2},{5,2}.
 Choosing set {2,7} is not possible as it will make the new array [3,3,3,3,5,5,5] which has a size greater than half of the size of the old array.
 
 Constraints:
-2 <= arr.length <= 105
+2 <= arr.length <= 10^5
 arr.length is even.
-1 <= arr[i] <= 105
+1 <= arr[i] <= 10^5
 */
 
 class Solution {
