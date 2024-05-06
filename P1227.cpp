@@ -21,6 +21,15 @@ Constraints:
 1 <= n <= 10^5
 */
 
+// If the 1st passenger choose a correct seat => OK.
+// If not, he will choose x-th passenger's seat => 2nd to (x - 1)-th passenger will still have correct seats. 
+// Now, x-th passenger will have 2 options: choose 1st passenger's seat, or another one.
+// If he choose the 1st passenger's seat => everyone after him will have their correct seats (including the last one).
+// Else, he choose the y-th passenger's seat => (x + 1)-th passenger to (y - 1)-th passenger will still have correct seats.
+// We see a pattern here, if the person who is taken his/her correct seat, he/she can take the person-take-his/her-seat'seat, or choose another one.
+// For the former, everything will ok for the rest. If not, we just repeat the process.
+// Therefore, the answer is 1/2.
+
 class Solution {
 public:
     double nthPersonGetsNthSeat(int n) {
