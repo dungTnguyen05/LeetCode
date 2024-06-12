@@ -50,7 +50,7 @@ public:
                 num_balls++;
             }
 
-            moves += num_balls; // as when we come to the next box, all the num_balls will move one step forward
+            moves += num_balls; // as when we come to the next box, all the num_balls will move one step backward
         }
 
         return res;
