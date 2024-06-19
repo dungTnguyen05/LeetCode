@@ -5,8 +5,6 @@ n passengers board an airplane with exactly n seats. The first passenger has los
 + Pick other seats randomly when they find their seat occupied
 Return the probability that the nth person gets his own seat.
 
- 
-
 Example 1:
 Input: n = 1
 Output: 1.00000
