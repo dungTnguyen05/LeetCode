@@ -12,8 +12,6 @@ The group is the largest size possible (i.e., there is not a string words[i] not
 
 Return the number of groups of special-equivalent strings from words.
 
- 
-
 Example 1:
 Input: words = ["abcd","cdab","cbad","xyzz","zzxy","zzyx"]
 Output: 3
